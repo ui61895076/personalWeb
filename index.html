@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/base.css"/>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<title></title>
+	</head>
+	<body>
+		<div class="music musicMove">
+			<audio src="src/Alan Walker - Fade.mp3" autoplay="autoplay" loop="loop" preload="auto" class="musics"></audio>
+		</div>
+		<div class="arrowUp AupDown">
+				<img src="img/08d523_79_74.png" />
+			</div>
+		<div class="page01 ">
+			<div class="points">			
+			</div>
+			<div class="bot-ball bounceInDown">
+				<img src="img/703e2a_951_401.png" />
+			</div>
+			
+			<div class="ufo bounceInRightTobreath">
+				<img src="img/60ebc8_330_112.png" />
+			</div>
+			<div class="star-ball01 bounceInRightTobreath">
+				<img src="img/523cd6_123_72.png" />
+			</div>
+			<div class="star-ball02 bounceInLeftTobreath">
+				<img src="img/5867e8_172_161.png" />
+			</div>
+			<div class="per fadeInDown">
+				<img src="img/db240a_277_284.png" />
+			</div>
+			<div class="message fadeInDown">
+				<img src="img/mes.png" />
+			</div>
+			<div class="mes-txt1 fadeInDown">
+				<img src="img/mes-txt1.png" />
+			</div>
+			<div class="mes-txt2 bounceInRight">
+				<img src="img/mes-txt2.png" />
+			</div>
+			<div class="red-stone rollIn">
+				<img src="img/zhuang.png" />
+			</div>
+			
+		</div>
+		<div class="page02 active">
+			<div class="page02-start start01 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start02 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start03 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start04 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start05 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start06 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start07 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start08 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start08 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start10 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start11 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start12 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start13 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start14 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="page02-start start15 fade">
+				<img src="img/207cba_29_29.png" />
+			</div>
+			<div class="blue-ball bounceInUp">
+				<img src="img/45611a_506_169.png" />
+			</div>
+			<div class="cat upDown">
+				<img src="img/ec014f_586_665.png" />
+			</div>
+			<div class="sun bounceInRight">
+				<img src="img/48b258_280_280.png" />
+			</div>
+		</div>
+		<div class="page03">
+			<div class="page03-top">
+				<img src="img/45611a_506_169.png" />
+			</div>
+			<div class="per-info"></div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>
+window.onload=function(){
+   		setSize();
+   		var musicBtn=document.querySelector(".music");
+   		var musics=document.querySelector('.musics');  		
+   		var musicFlag=0;
+   		musicBtn.addEventListener('touchstart',
+   		function(){
+   			if(musicFlag==0){
+   				musicFlag=1;
+   				musics.pause();
+   				//$('.music').removeClass('musicMove');
+   				remove_Class(musicBtn,'musicMove');
+   				
+   			}else{
+   				musicFlag=0;
+   				musics.play();
+   				//$('.music').addClass('musicMove');
+   				add_Class(musicBtn,'musicMove');
+   			}
+   		},false);
+   	//开始播放音乐，关闭音乐；	
+   		
+   }
+    var pixelRatio=1/window.devicePixelRatio;
+    var ohtml=document.querySelectorAll('html')[0];
+    window.addEventListener('resize',setSize);
+    document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'"/>');
+	function setSize(){
+		    htmlW=ohtml.getBoundingClientRect().width;
+	        ohtml.style.fontSize=htmlW/16+'px';
+	        
+	};//移动端页面的设置初始化 
+        $('.red-stone').bind('animationend',function(){
+   			$('.mes-txt2').removeClass('bounceInRight').css('transform','rotate(-15deg) translate(-10px,-5px)');//需要先将animation删除后面才会起作用
+   			
+   			$('.ufo,.star-ball01').removeClass('bounceInRightTobreath').addClass('breath');
+   			$('.star-ball02').removeClass('bounceInLeftTobreath').addClass('breath');
+   			$('.per').removeClass('fadeInDown').addClass('breath');
+   		});//page01 里面的动画效果
+   
+   
+   var _sun=document.querySelector('.sun');
+    _sun.addEventListener('animationend',function(){
+    	add_Class(this,'rotateAlways');
+    	remove_Class(this,'bounceInRight');
+    })//page02 动画效果
+    
+    
+   /* $('.sun').bind('animationend',function(){
+    	$(this).addClass('rotateAlways').removeClass('bounceInRight');
+    });*///page02 动画效果
+</script>
+<script>
+function add_Class(obj,cls){
+	var obj_cls=obj.className;
+	if(obj.className==''){
+		obj.className+=cls;
+	}else{
+		obj.className=obj_cls+' '+cls;
+	}
+};
+
+
+function remove_Class(obj,cls){
+	var aObj_class=obj.className.split(' ');
+	if(obj.className==''){
+		return;
+	}else{
+		for(var i=0;i<aObj_class.length;i++){
+			if(aObj_class[i]==cls){
+				aObj_class.splice(i,1);
+			};
+		};
+		obj.className=aObj_class.join(' ');
+	};
+}
+
+
+	
+</script>
