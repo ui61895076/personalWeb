@@ -1,5 +1,11 @@
 @rem:40rem;
 
+.scroll-main{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
 .active .upDown{
     animation: upDown .8s infinite alternate-reverse;
 }
@@ -10,7 +16,7 @@
 .active .rotateAlways{
    animation: rotateAlways 7s infinite  both linear;
 }
-.rollIn{
+.active .rollIn{
     animation: rollIn .8s both;
 }
 .active .fadeInDown{
@@ -40,12 +46,15 @@
     animation: redStoneRight .8s both;
 }
 
-.breath{
+.active .breath{
     animation: breath 3s infinite alternate-reverse;
 }
 
 .active .fade{
     animation:fade 1.5s infinite both alternate-reverse;
+}
+.active .fade2{
+    animation: fade2 1.5s both ;
 }
 
 html{
@@ -67,7 +76,7 @@ body{
     position: absolute;
     right: 2%;
     top: 2%;
-    z-index: 2;
+    z-index: 99;
    
 }
 .musicMove{
@@ -83,6 +92,7 @@ body{
     position: absolute;
     left: 0;
     top: 0;
+    z-index:4;
 }
 .page01 .points{
     width:100%;
@@ -243,6 +253,17 @@ body{
     top: 0;
     background: url(../img/bg2.png) no-repeat;
     background-size: cover;
+     z-index:3;
+}
+.page04{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/bg2.png) no-repeat;
+    background-size: cover;
+     z-index:1;
 }
 .page02-start{
     width: 29/@rem;
@@ -376,6 +397,7 @@ body{
     top:0;
     background:url(../img/bg2.png) no-repeat;
     background-size: cover;
+    z-index: 2;
 }
 .page03-top{
     width: 506/@rem;
@@ -391,6 +413,288 @@ body{
         height: 100%;
     }
 }
+.per-info{
+    width: 200/@rem;
+    height:46/@rem;
+    position: absolute;
+    left: 32%;
+    top: 20%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.page03-r{
+    width: 389/@rem;
+    height: 178/@rem;
+    position: absolute;
+    right: -7%;
+    top: 30%;
+    img{
+        width: 100%;
+        height: 100%;
+        
+    }
+}
+.page03-p{
+    width: 277/@rem;
+    height: 284/@rem;
+    position: absolute;
+    left: -5%;
+    bottom: 10%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p3-name{
+    width: 174/@rem;
+    height: 30/@rem;
+    position: absolute;
+    left: 15%;
+    top:30%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p3-age{
+    width: 122/@rem;
+    height: 30/@rem;
+    position: absolute;
+    left:15%;
+    top:35%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p3-sex{
+    width: 103/@rem;
+    height: 30/@rem;
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p3-pos{
+    width: 136/@rem;
+    height: 30/@rem;
+    position: absolute;
+    left: 15%;
+    top: 45%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.p3-edu{
+    width: 293/@rem;
+    height: 30/@rem;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p3-tel{
+    width:310/@rem;
+    height: 30/@rem;
+    position: absolute;
+    right: 12%;
+    top: 60%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p3-qq{
+    width: 240/@rem;
+    height: 30/@rem;
+    position: absolute;
+    right: 22%;
+    top: 65%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p3-email{
+    position: absolute;
+    top:70%;
+    right: 3%;
+    width: 399/@rem;
+    height: 30/@rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.small-ufo{
+    width: 361/@rem;
+    height: 246/@rem;
+    position: absolute;
+    left: 52%;
+    top: 6%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.page4-star{
+    position: absolute;
+    left:-31%;
+    bottom: 6%;
+    width: 528/@rem;
+    height: 456/@rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.p4-title{
+    width: 230/@rem;
+    height: 60/@rem;
+    position: absolute;
+    left: 50%;
+    top: 14%;
+    margin-left: -(230/@rem)/2;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.sx{
+    color: #fff;
+    font-size: 50/@rem;
+    position: absolute;
+    
+}
+.sx01{
+    left:27%;
+    top: 25%;
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+    animation-delay: .2s !important;
+}
+.sx02{
+    left:42%;
+    top: 34%;
+    -webkit-transform: rotate(-16deg);
+    transform: rotate(-16deg);
+    animation-delay: .4s !important;
+}
+.sx03{
+    left:9%;
+    top: 35%;
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    font-size: 30/@rem;
+     animation-delay: .6s !important;
+    
+}
+.sx04{
+    left:56%;
+    top: 50%;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    font-size: 45/@rem;
+    
+     animation-delay: .8s !important;
+}
+.sx05{
+    left:36%;
+    top: 44%;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+     font-size: 40/@rem;
+      animation-delay: 1s !important;
+}
+.sx06{
+    left:80%;
+    top: 56%;
+    -webkit-transform: rotate(-16deg);
+    transform: rotate(-16deg);
+     animation-delay: 1.2s !important;
+}
+.sx07{
+    left:51%;
+    top: 28%;
+    -webkit-transform: rotate(13deg);
+    transform: rotate(13deg);
+    font-size: 40/@rem;
+     animation-delay: 1.4s !important;
+}
+.sx08{
+    left:2%;
+    top: 43%;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+      font-size: 40/@rem;
+       animation-delay: 1.6s !important;
+}
+.sx09{
+    left:72%;
+    top: 35%;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+     animation-delay: 1.8s !important;
+}
+.sx10{
+    left:43%;
+    top: 54%;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+     animation-delay: 2s !important;
+}
+.sx11{
+    left:21%;
+    top: 57%;
+    -webkit-transform: rotate(-16deg);
+    transform: rotate(-16deg);
+    font-size: 30/@rem;
+     animation-delay: 2.2s !important;
+}
+.sx12{
+    left:51%;
+    top: 61%;
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+    font-size: 30/@rem;
+     animation-delay: 2.4s !important;
+}
+.sx13{
+    left:20%;
+    top: 51%;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+    font-size: 30/@rem;
+     animation-delay: 2.6s !important;
+}
+.sx14{
+    left:38%;
+    top: 67%;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+     font-size: 35/@rem;
+      animation-delay: 2.8s !important;
+}
+.sx15{
+    left:55%;
+    top: 43%;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+     animation-delay: 3s !important;
+   
+    font-size: 40/@rem;
+}
 .arrowUp{
     width: 79/@rem;
     height: 74/@rem;
@@ -399,7 +703,7 @@ body{
     left: 50%;
     
     margin-left: -(79/@rem)/2;
-    z-index: 3;
+    z-index: 99;
     
     img{
         width: 100%;
